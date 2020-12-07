@@ -2,6 +2,8 @@ jobs:
   main:
     image: node:8
     requires: [~pr, ~commit]
+    annotations:
+      screwdriver.cd/displayName: foo
     steps:
       - echo: echo hoge
       
