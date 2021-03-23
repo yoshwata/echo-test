@@ -1,9 +1,11 @@
 jobs:
   main:
     image: node:8
-    requires: [~pr, ~commit]
-    annotations:
-      screwdriver.cd/displayName: foo
+    requires: [~commit]
     steps:
       - echo: echo hoge
-      
+  pr:
+    image: node:8
+    requires: [~pr]
+    steps:
+      - echo: echo hoge
