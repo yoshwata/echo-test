@@ -13,3 +13,7 @@ jobs:
     requires: [ build1 ]
     steps:
       - hello: echo "Hello build2"
+  det:
+    requires: []
+    steps:
+      - hello: echo "Hello det"
