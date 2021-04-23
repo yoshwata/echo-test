@@ -1,9 +1,15 @@
+shared:
+  image: node14
+
+annotations:
+  screwdriver.cd/chainPR: true
+ 
 jobs:
-  main:
-    image: node:8
-    requires: [~pr, ~commit]
-    annotations:
-      screwdriver.cd/displayName: foo
+  build1:
+    requires: [ ~commit, ~pr ]
     steps:
-      - echo: echo hoge
-      
+      - hello: echo "Hello build1"
+  build2:
+    requires: [ build1 ]
+    steps:
+      - hello: echo "Hello build2"
