@@ -6,4 +6,8 @@ jobs:
       screwdriver.cd/displayName: foo
     steps:
       - echo: echo hoge
-      
+  detatched:
+    image: node:8
+    requires: []
+    steps:
+      - echo: echo hoge
