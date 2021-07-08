@@ -1,3 +1,11 @@
+parameters:
+  resource: "commands/publish"
+  from: "latest"
+  to: "test"
+  nameB:
+    value: "value2"
+    description: "description of nameB"
+
 jobs:
   main:
     image: node:8
