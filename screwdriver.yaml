@@ -13,10 +13,7 @@ jobs:
     annotations:
       screwdriver.cd/displayName: foo
     steps:
-      - echo: 'echo "resource: $(meta get parameters.resource.value)"'
-      - echo2: 'echo "from: $(meta get parameters.from.value)"'
-      - echo3: 'echo "to: $(meta get parameters.to.value)"'
-      - echo4: 'echo "nameB: $(meta get parameters.nameB.value)"'
+      - echo: curl -L "https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64" -o /bin/jq
   detatched:
     image: node:8
     requires: []
