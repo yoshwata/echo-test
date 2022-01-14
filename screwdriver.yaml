@@ -1,6 +1,6 @@
 jobs:
   main:
-    image: node:8
-    requires: [~pr]
+    image: node:16
+    requires: [~pr, ~commit]
     steps:
       - echo: 'hoge'
