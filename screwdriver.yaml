@@ -1,6 +1,6 @@
 jobs:
   main:
-    image: node:16
+    image: yoshwata/centos:1.0
     requires: [~pr, ~commit]
     steps:
       - echo: 'hoge'
