@@ -8,9 +8,14 @@ jobs:
       - echo: echo $SD_GIT_WRAPPER
       - git: $SD_GIT_WRAPPER "git version"
       - sleep: sleep 999
-  foo:
+  A:
     image: yoshwata/centos:1.0
     requires: [~pr, ~commit]
+    steps:
+      - sleep: sleep 30
+  B:
+    image: yoshwata/centos:1.0
+    requires: [ ~A ]
     steps:
       - sleep: sleep 999
       
